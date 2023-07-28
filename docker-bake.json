@@ -1,0 +1,25 @@
+{
+  "group": {
+    "default": {
+      "targets": [
+        "docker-git-sync"
+      ]
+    }
+  },
+  "variable": {
+    "TAG": {
+      "default": "latest"
+    }
+  },
+  "target": {
+    "docker-git-sync": {
+      "dockerfile": "Dockerfile",
+      "args": {
+        "base_image": "docker:${TAG}"
+      },
+      "tags": [
+        "ghcr.io/offerland-ca/dockerfile-docker-git-sync:${TAG}"
+      ]
+    }
+  }
+}

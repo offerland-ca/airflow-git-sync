@@ -2,7 +2,7 @@
   "group": {
     "default": {
       "targets": [
-        "docker-git-sync"
+        "airflow-git-sync"
       ]
     }
   },
@@ -12,13 +12,13 @@
     }
   },
   "target": {
-    "docker-git-sync": {
+    "airflow-git-sync": {
       "dockerfile": "Dockerfile",
       "args": {
         "base_image": "docker:${TAG}"
       },
       "tags": [
-        "ghcr.io/offerland-ca/dockerfile-docker-git-sync:${TAG}"
+        "ghcr.io/offerland-ca/airflow-git-sync:${TAG}"
       ]
     }
   }
